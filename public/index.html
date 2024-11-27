@@ -1,0 +1,67 @@
+<!--
+Nama: Muhammad Putra Erlangga Syawaluddin
+Kelas: XII RPL
+Alamat: Kecamatan Karangploso, Kabupaten Malang
+
+Fakta Unik:
+- HTML5 dirilis secara resmi pada tahun 2014
+- Favicon pertama kali diperkenalkan oleh Internet Explorer tahun 1999 
+- Meta viewport ditambahkan untuk mendukung tampilan responsif di mobile
+- Manifest JSON memungkinkan web app dapat diinstal seperti aplikasi native
+- Tag <noscript> diperkenalkan di HTML 4.01 untuk konten alternatif jika JavaScript dinonaktifkan
+- React menggunakan Virtual DOM untuk meningkatkan performa rendering
+-->
+
+<!DOCTYPE html>
+<!-- Mendefinisikan bahasa dokumen sebagai bahasa Inggris -->
+<html lang="en">
+  <head>
+    <!-- Mendefinisikan encoding karakter UTF-8 untuk mendukung berbagai karakter -->
+    <meta charset="utf-8" />
+    <!-- Menghubungkan favicon untuk ikon di tab browser -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Mengatur viewport untuk tampilan responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Mengatur warna tema untuk browser mobile -->
+    <meta name="theme-color" content="#000000" />
+    <!-- Deskripsi website untuk SEO -->
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!-- Ikon untuk perangkat Apple -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json menyediakan metadata yang digunakan ketika web app diinstal
+      di perangkat mobile atau desktop pengguna. Lihat https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Perhatikan penggunaan %PUBLIC_URL% pada tag di atas.
+      Ini akan diganti dengan URL folder 'public' saat proses build.
+      Hanya file di dalam folder 'public' yang dapat direferensikan dari HTML.
+
+      Tidak seperti "/favicon.ico" atau "favicon.ico", "%PUBLIC_URL%/favicon.ico"
+      akan berfungsi dengan benar baik dengan client-side routing maupun URL public non-root.
+      Pelajari cara mengkonfigurasi URL public non-root dengan menjalankan `npm run build`.
+    -->
+    <!-- Judul yang akan ditampilkan di tab browser -->
+    <title>React App</title>
+  </head>
+  <body>
+    <!-- Pesan yang ditampilkan jika JavaScript dinonaktifkan di browser -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Container utama tempat aplikasi React akan di-render -->
+    <div id="root"></div>
+    <!--
+      File HTML ini adalah template.
+      Jika Anda membukanya langsung di browser, Anda akan melihat halaman kosong.
+
+      Anda dapat menambahkan webfont, meta tag, atau analytics ke file ini.
+      Langkah build akan menempatkan script yang sudah di-bundle ke dalam tag <body>.
+
+      Untuk memulai development, jalankan `npm start` atau `yarn start`.
+      Untuk membuat bundle production, gunakan `npm run build` atau `yarn build`.
+    -->
+  </body>
+</html>

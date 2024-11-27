@@ -1,0 +1,157 @@
+/*
+Nama: Muhammad Putra Erlangga Syawaluddin
+Kelas: XII RPL
+Alamat: Kecamatan Karangploso, Kabupaten Malang
+
+Fakta Unik:
+- CSS pertama kali diperkenalkan oleh Håkon Wium Lie pada tahun 1994
+- Selector nth-child() diperkenalkan di CSS3
+- Properti user-select diperkenalkan untuk mencegah seleksi teks
+- Transisi CSS pertama kali didukung di Firefox 4.0 tahun 2011
+- Flexbox layout module diperkenalkan tahun 2009
+*/
+
+/* Mengatur lebar maksimum konten dan posisi di tengah */
+.content {
+  max-width: 720px; 
+  margin: 0 auto;
+}
+
+/* Mengubah model box sizing agar padding dan border termasuk dalam total lebar/tinggi elemen */
+* {
+  box-sizing: border-box;
+}
+
+/* Menghapus margin dan padding default dari list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling untuk item list todo:
+   - Cursor pointer untuk UX yang lebih baik
+   - Position relative untuk penempatan elemen child
+   - Padding asimetris untuk ruang checkmark
+   - Transisi smooth 0.2s untuk efek hover
+   - Mencegah seleksi teks untuk UX yang lebih baik
+*/
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  list-style-type: none;
+  transition: 0.2s;
+
+  /* Mencegah seleksi teks di berbagai browser */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Membuat efek zebra-stripe dengan background berbeda untuk item ganjil */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Efek hover dengan background lebih gelap */
+ul li:hover {
+  background: #ddd;
+}
+
+/* Styling untuk item yang sudah selesai (checked):
+   - Background abu-abu
+   - Teks putih
+   - Teks dicoret
+*/
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Membuat tanda centang custom menggunakan pseudo-element ::before
+   - Menggunakan border untuk membuat bentuk checkmark
+   - Transform rotate untuk sudut yang tepat
+*/
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Styling tombol close (hapus todo) */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+/* Efek hover untuk tombol close dengan warna merah */
+.close:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Styling header aplikasi dengan warna biru gelap */
+.header {
+  background-color: #34495e;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Membersihkan float setelah header menggunakan pseudo-element */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Styling input field:
+   - Lebar 75% dari container
+   - Tanpa border dan radius
+   - Float left untuk posisi sejajar dengan tombol
+*/
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Styling tombol Add:
+   - Lebar 25% dari container
+   - Warna background abu-abu terang
+   - Transisi smooth untuk hover
+*/
+.add-button {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+/* Efek hover untuk tombol Add dengan warna lebih gelap */
+.add-button:hover {
+  background-color: #bbb;
+}
